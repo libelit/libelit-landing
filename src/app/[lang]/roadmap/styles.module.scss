@@ -1,0 +1,9 @@
+.secondSection {
+  & > div {
+    :last-child {
+      .phaseLine {
+        display: none;
+      }
+    }
+  }
+}

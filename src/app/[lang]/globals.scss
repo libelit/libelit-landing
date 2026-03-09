@@ -1,0 +1,307 @@
+// .logo {
+//     @apply w-[105px] h-[48px];
+// }
+
+.h1 {
+  @apply font-bold text-primary-900 text-[56px] leading-[72px];
+}
+
+.h2 {
+  @apply font-bold text-[44px] leading-[52px];
+}
+
+.h3 {
+  @apply text-[24px] leading-[32px];
+}
+
+.h4 {
+  @apply text-[20px] leading-[30px];
+}
+
+.h5 {
+  @apply text-[18px] leading-[28px];
+}
+
+.heading {
+  @apply text-primary-900 text-[2.75rem] leading-[3.25rem] font-bold;
+}
+
+.subheading {
+  @apply text-accent-400 text-base leading-[1.5rem] font-semibold;
+}
+
+.supporting-text {
+  @apply text-primary-600 text-[1.25rem] leading-[1.875rem] font-normal;
+}
+
+// button
+
+.btn-accent {
+  @apply text-[1rem] leading-[1.5rem] font-semibold bg-accent-400 text-white px-[26px] py-3 rounded-full shadow-accent-default inline-flex items-center justify-center gap-2 border-accent-400 border-2;
+}
+
+.btn-accent:hover {
+  @apply bg-accent-500 shadow-accent-hover border-accent-500;
+}
+
+.btn-accent:active {
+  @apply bg-accent-600 shadow-accent-active border-accent-600;
+}
+
+.btn-accent:focus {
+  @apply bg-accent-500 shadow-accent-focus border-accent-500;
+}
+
+.btn-accent:disabled {
+  @apply bg-accent-50 shadow-accent-disabled border-accent-50;
+}
+
+.btn-accent-round {
+  @apply text-[1rem] leading-[1.5rem] font-semibold bg-accent-400 text-white px-3 py-3 rounded-full shadow-accent-default inline-flex items-center justify-center gap-2 border-accent-400 border-2;
+}
+
+.btn-accent-round:hover {
+  @apply bg-accent-500 shadow-accent-hover border-accent-500;
+}
+
+.btn-accent-round:active {
+  @apply bg-accent-600 shadow-accent-active border-accent-600;
+}
+
+.btn-accent-round:focus {
+  @apply bg-accent-500 shadow-accent-focus border-accent-500;
+}
+
+.btn-accent-round:disabled {
+  @apply bg-accent-50 shadow-accent-disabled border-accent-50;
+}
+
+.btn-link {
+  @apply text-primary-800 px-[26px] py-3;
+}
+
+.btn-link:hover {
+  @apply text-primary-900;
+}
+
+// button-secondary
+
+.btn-secondary {
+  @apply text-[1rem] leading-[1.5rem] font-semibold text-primary-800 px-[26px] py-3 rounded-full shadow-secondary-default border-2 border-primary-900 inline-flex items-center justify-center gap-2;
+}
+
+.btn-secondary:hover {
+  @apply bg-primary-50;
+}
+
+.btn-secondary:active {
+  @apply bg-primary-100;
+}
+
+.btn-secondary:focus {
+  @apply bg-primary-25 shadow-secondary-focus;
+}
+
+.btn-secondary:disabled {
+  @apply text-primary-300 bg-primary-25 shadow-secondary-disabled;
+}
+
+.bg-blur {
+  z-index: 1;
+}
+
+.bg-blur {
+  backdrop-filter: blur(7px);
+}
+
+.blockchain-process {
+  flex: 1 0 1;
+
+  .change-title-order {
+    list-style: armenian;
+  }
+}
+
+.blockchain-process:nth-child(odd) {
+  .change-title-order {
+    @media (min-width: 480px) {
+      order: 2;
+      @apply text-left;
+    }
+  }
+
+  .change-image-order {
+    order: 1;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 4px 6px -2px rgb(16 24 40 / 3%),
+    0 12px 16px -4px rgb(16 24 40 / 8%);
+}
+
+.image-shadow {
+  box-shadow: 0 24px 28px -12px rgb(16 24 40 / 18%);
+}
+
+.blur-background:hover {
+  background: rgb(126, 125, 125);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(126, 125, 125, 1) 0%,
+    rgba(204, 204, 204, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(126, 125, 125, 1) 0%,
+    rgba(204, 204, 204, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(126, 125, 125, 1) 0%,
+    rgba(204, 204, 204, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7e7d7d", endColorstr="#cccccc", GradientType=1);
+}
+
+@media (min-width: 1279px) {
+  .description-wrapper:nth-child(even) {
+    .lg-change-order {
+      order: -1;
+    }
+  }
+
+  .better-design:nth-child(odd) {
+    .lg-change-order {
+      order: -1;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .h1 {
+    @apply text-[44px] leading-[52px];
+  }
+
+  .heading {
+    @apply text-primary-900 text-[2.25rem] leading-[2.75rem] font-bold;
+  }
+
+  .subheading {
+    @apply text-accent-400 text-base leading-[1.5rem] font-semibold;
+  }
+
+  .supporting-text {
+    @apply text-primary-600 text-[1.25rem] leading-[1.875rem] font-medium;
+  }
+}
+
+@media (max-width: 744px) {
+  .h1 {
+    @apply text-[36px] leading-[44px];
+  }
+
+  .heading {
+    @apply text-primary-900 text-[1.875rem] leading-[2.375rem] font-bold;
+  }
+
+  .subheading {
+    @apply text-accent-400 text-base leading-[1.5rem] font-semibold;
+  }
+
+  .supporting-text {
+    @apply text-primary-600 text-[1.125rem] leading-[1.625rem] font-medium;
+  }
+}
+
+//animations
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin pull-up($time) {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp $time ease forwards;
+  animation-delay: 0.2s;
+}
+
+@mixin pull-down($time) {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideDown $time ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.pull-up-first {
+  @include pull-up(0.4s);
+}
+
+.pull-up-first-reverse {
+  @include pull-down(0.4s);
+}
+
+.pull-up-second {
+  @include pull-up(0.8s);
+}
+
+.pull-up-second-reverse {
+  @include pull-down(0.8s);
+}
+.pull-up-third {
+  @include pull-up(1.2s);
+}
+
+.pull-up-third-reverse {
+  @include pull-down(1.2s);
+}
+
+@mixin fade-in($time) {
+  opacity: 0;
+  animation: fadeIn $time ease forwards;
+  animation-delay: $time;
+}
+
+.fade-in-first,
+.fade-in-first-reverse {
+  @include fade-in(0.4s);
+}
+
+.fade-in-second,
+.fade-in-second-reverse {
+  @include fade-in(0.8s);
+}
+
+.fade-in-third,
+.fade-in-third-reverse {
+  @include fade-in(1.2s);
+}

@@ -1,0 +1,34 @@
+.imageCircle {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  border: 3px solid white;
+  object-fit: contain;
+
+  @media (max-width: 744px) {
+    width: 94px !important;
+    height: 94px !important;
+  }
+}
+
+.defaultImage {
+  color: #ffffff;
+  width: 56px;
+  height: 56px;
+  stroke-width: 1px;
+  @media (max-width: 744px) {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
+.profilePicture {
+  width: 100%;
+  height: 100%;
+}

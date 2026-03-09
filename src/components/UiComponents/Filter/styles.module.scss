@@ -1,0 +1,15 @@
+.sortBy {
+  &:focus,
+  &:active {
+    .sortOptions {
+      display: block;
+    }
+  }
+}
+
+.sortOptions {
+  display: none;
+  &:clicked {
+    display: none;
+  }
+}

@@ -1,0 +1,31 @@
+.aboutUsContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+
+  .downArrowIcon {
+    display: block;
+  }
+  .upArrowIcon {
+    display: none;
+  }
+
+  &:hover {
+    .downArrowIcon {
+      display: none;
+    }
+    .upArrowIcon {
+      display: block;
+    }
+    .dropdownContainer {
+      display: block;
+    }
+  }
+}
+
+.dropdownContainer {
+  position: absolute;
+  display: none;
+}

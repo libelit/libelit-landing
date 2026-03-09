@@ -1,0 +1,291 @@
+@import "@/styles/colorVariables.scss";
+
+.btn {
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 1px 2px 0px #2632380a;
+
+  &:hover {
+    box-shadow: 0px 4px 8px -2px #1018281a, 0px 2px 4px -2px #1018280f;
+    transition: 0.4s;
+  }
+
+  &:focus {
+    box-shadow: 0px 1px 2px 0px #2632380d, 0px 0px 0px 4px #ebebeb;
+  }
+}
+
+.btnContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+//hierarchy==========
+
+.btnAccent {
+  color: $extra-6;
+  background-color: $accent-400;
+  &:hover {
+    background-color: $accent-500;
+  }
+  &:active {
+    &:focus {
+      background-color: $accent-600;
+    }
+  }
+  &:focus {
+    background-color: $accent-500;
+    box-shadow: 0px 0px 0px 4px #fde8e3, 0px 1px 2px 0px #2632380d;
+  }
+  &:disabled {
+    background-color: $accent-50;
+    color: $primary-400;
+  }
+}
+
+.btnPrimary {
+  color: $extra-6;
+  background-color: $primary-800;
+
+  &:hover {
+    background-color: $primary-700;
+  }
+  &:active {
+    &:focus {
+      background-color: $primary-900;
+    }
+  }
+  &:focus {
+    background-color: $primary-600;
+    box-shadow: 0px 0px 0px 4px #ebebeb, 0px 1px 2px 0px #2632380d;
+  }
+  &:disabled {
+    background-color: $primary-200;
+    color: $extra-6;
+  }
+}
+
+.btnSecondaryAccent {
+  color: $primary-800;
+  background-color: #ffffff4d;
+  border: 2.5px solid $accent-500;
+  &:hover {
+    background-color: $accent-25;
+    border: 2.5px solid $accent-600;
+    color: $primary-900;
+  }
+  &:active {
+    &:focus {
+      background-color: $accent-50;
+      border: 2.5px solid $accent-700;
+      color: $primary-900;
+    }
+  }
+  &:focus {
+    background-color: $accent-25;
+    border: 2px solid $accent-600;
+    box-shadow: 0px 0px 0px 4px #fde8e3, 0px 1px 2px 0px #2632380d;
+    color: $primary-900;
+  }
+  &:disabled {
+    color: $primary-300;
+    background-color: $accent-25;
+
+    border: 3px solid $accent-300;
+  }
+}
+
+.btnSecondary {
+  color: $primary-800;
+  background-color: #ffffff4d;
+  border: 2.5px solid $primary-800;
+  &:hover {
+    background-color: $primary-50;
+    border: 2.5px solid $primary-900;
+    color: $primary-900;
+  }
+  &:active {
+    &:focus {
+      background-color: $primary-100;
+      border: 2.5px solid $primary-900;
+      color: $primary-900;
+    }
+  }
+  &:focus {
+    background-color: $primary-25;
+    border: 2px solid $primary-900;
+    box-shadow: 0px 0px 0px 4px #ebebeb, 0px 1px 2px 0px #2632380d;
+    color: $primary-900;
+  }
+  &:disabled {
+    color: $primary-300;
+    background-color: $primary-25;
+
+    border: 3px solid $primary-300;
+  }
+}
+
+.btnTertiaryAccent {
+  color: $accent-500;
+  background-color: unset;
+
+  &:hover {
+    background-color: $accent-25;
+    color: $accent-600;
+  }
+  &:active {
+    &:focus {
+      background-color: $accent-50;
+      color: $accent-700;
+    }
+  }
+  &:focus {
+    border: 2px solid $primary-200;
+    color: $accent-600;
+    //box-shadow: 0px 1px 2px 0px #2632380d, 0px 0px 0px 4px #fde8e3;
+  }
+  &:disabled {
+    color: $accent-600;
+
+    border: 2px solid $primary-200;
+  }
+}
+
+.btnTertiaryGray {
+  color: $primary-800;
+  background-color: unset;
+
+  &:hover {
+    background-color: $primary-25;
+    color: $primary-900;
+  }
+  &:active {
+    &:focus {
+      background-color: $primary-50;
+      color: $primary-900;
+    }
+  }
+  &:focus {
+    border: 2px solid $primary-200;
+    color: $primary-800;
+    //box-shadow: 0px 1px 2px 0px #2632380d, 0px 0px 0px 4px #fde8e3;
+  }
+  &:disabled {
+    color: $primary-200;
+  }
+}
+
+.btnPrimaryDestructive {
+  color: $extra-6;
+  background-color: $error-500;
+  &:hover {
+    background-color: $error-400;
+  }
+  &:active {
+    &:focus {
+      background-color: $error-700;
+    }
+  }
+  &:focus {
+    background-color: $error-400;
+
+    box-shadow: 0px 1px 2px 0px #2632380d, 0px 0px 0px 4px #ffebee;
+  }
+  &:disabled {
+    background-color: $error-100;
+  }
+}
+//# heirarchy end
+//
+//
+//
+//size==========
+
+.btnXXLarge {
+  padding: 14px 28px 14px 28px;
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  .iconOnly {
+    width: 24px;
+    height: 24px;
+  }
+}
+.btnXLarge {
+  padding: 12px 26px 12px 26px;
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .iconOnly {
+    width: 24px;
+    height: 24px;
+  }
+}
+.btnLarge {
+  padding: 12px 26px 12px 26px;
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .iconOnly {
+    width: 20px;
+    height: 20px;
+  }
+}
+.btnMedium {
+  padding: 10px 22px 10px 22px;
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+  .iconOnly {
+    width: 18px;
+    height: 18px;
+  }
+}
+.btnSmall {
+  padding: 8px 18px 8px 18px;
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+  .iconOnly {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+//icon==========
+.icon {
+  stroke-width: 2.5px;
+  flex-grow: 1;
+}
+.iconLeft {
+  flex-direction: row-reverse;
+}
+
+.paddingLg {
+  padding: 12px;
+}
+
+.paddingMd {
+  padding: 10px;
+}
+.paddingSm {
+  padding: 8px;
+}
+
+.linkGrey {
+  cursor: pointer;
+  border: unset;
+  background-color: unset;
+  color: $primary-800;
+  &:hover {
+    box-shadow: none;
+    color: $primary-900;
+  }
+}

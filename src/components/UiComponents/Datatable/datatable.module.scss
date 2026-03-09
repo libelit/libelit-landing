@@ -1,0 +1,101 @@
+.padRow {
+  height: 190px;
+
+  @media (max-width: 1380px) {
+    height: 290px;
+  }
+
+  @media (max-width: 598px) {
+    height: 400px;
+  }
+  @media (max-width: 538px) {
+    height: 400px;
+  }
+  @media (max-width: 421px) {
+    height: 400px;
+  }
+  @media (max-width: 365px) {
+    height: 440px;
+  }
+  @media (max-width: 347px) {
+    height: 470px;
+  }
+}
+
+.padRowSmall {
+  height: 190px;
+
+  @media (max-width: 1230px) {
+    height: 250px;
+  }
+  @media (max-width: 990px) {
+    height: 190px;
+  }
+  @media (max-width: 926px) {
+    height: 250px;
+  }
+  @media (max-width: 598px) {
+    height: 415px;
+  }
+
+  @media (max-width: 366px) {
+    height: 435px;
+  }
+}
+
+.resaleButtons {
+  @media (max-width: 421px) {
+    flex-direction: column;
+  }
+}
+
+// .padRow {
+//   height: 380px;
+
+//   @media (max-width: 1380px) {
+//     height: 490px;
+//   }
+
+//   @media (max-width: 598px) {
+//     height: 600px;
+//   }
+//   @media (max-width: 538px) {
+//     height: 640px;
+//   }
+//   @media (max-width: 421px) {
+//     height: 680px;
+//   }
+//   @media (max-width: 381px) {
+//     height: 730px;
+//   }
+//   @media (max-width: 347px) {
+//     height: 780px;
+//   }
+// }
+
+// .padRowSmall {
+//   height: 190px;
+
+//   @media (max-width: 1230px) {
+//     height: 250px;
+//   }
+//   @media (max-width: 990px) {
+//     height: 190px;
+//   }
+//   @media (max-width: 926px) {
+//     height: 250px;
+//   }
+//   @media (max-width: 598px) {
+//     height: 415px;
+//   }
+
+//   @media (max-width: 366px) {
+//     height: 435px;
+//   }
+// }
+
+// .resaleButtons {
+//   @media (max-width: 421px) {
+//     flex-direction: column;
+//   }
+// }

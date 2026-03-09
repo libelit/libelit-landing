@@ -1,0 +1,8 @@
+.sectionContainer {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 270px 1fr;
+  @media (max-width: 745px) {
+    grid-template-columns: 1fr;
+  }
+}
