@@ -10,8 +10,6 @@ import Sidebar from "./Sidebar";
 import Navigation from "./Navigation";
 import { isAuthenticated, logout } from "@/utility/auth";
 import { useRouter } from "next/router";
-import { autoConnectWallet } from "@/utility/wallet";
-import { useSDK } from "@metamask/sdk-react";
 import { useContainer } from "@/contexts/ContainerContext";
 
 interface ContainerProps {
@@ -67,22 +65,6 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
-
-  // wallet connection part
-  const { sdk, connected, provider } = useSDK();
-  const { setAccounts } = useContainer();
-
-  const connectWallet = async () => {
-    const accounts = await autoConnectWallet(sdk, provider);
-
-    setAccounts(accounts ?? []);
-  };
-
-  useEffect(() => {
-    if (provider && connected) {
-      connectWallet();
-    }
-  }, [provider, connected]);
 
   return (
     <div className="main-container">
