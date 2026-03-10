@@ -1,44 +1,42 @@
-'use client';
-import React, { useEffect } from 'react';
+"use client";
+import { useEffect } from "react";
+import ReactModal from "react-modal";
 
-/**
- * Minimal modal. Click backdrop or press ESC to close.
- * Replace later with your preferred UI lib.
- */
-export default function Modal({
-  open,
-  onClose,
+interface IModal {
+  children?: any;
+  isOpen: boolean;
+  className?: string;
+  onRequestClose?: any;
+  disablePadding?: Boolean;
+  reff?: any;
+}
+ReactModal.setAppElement("body");
+
+const Modal = ({
+  isOpen,
+  className,
+  onRequestClose,
+
   children,
-}: {
-  open: boolean;
-  onClose?: () => void;
-  children: React.ReactNode;
-}) {
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose?.();
-    if (open) window.addEventListener('keydown', onKey);
-    document.body.style.overflow = open ? 'hidden' : '';
-    return () => {
-      window.removeEventListener('keydown', onKey);
-      document.body.style.overflow = '';
-    };
-  }, [open, onClose]);
-
-  if (!open) return null;
-
+  disablePadding,
+  reff,
+}: IModal) => {
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
-      onClick={onClose}
+    <ReactModal
+      isOpen={isOpen}
+      overlayClassName=" modal-overlay"
+      className={`modal-content ${className} `}
+      onRequestClose={onRequestClose}
     >
       <div
-        className="bg-white text-black rounded-md p-4 max-w-lg w-[90%]"
+        className={` ${!disablePadding && "px-6 py-6"}  w-full h-full`}
         onClick={(e) => e.stopPropagation()}
+        ref={reff}
       >
         {children}
       </div>
-    </div>
+    </ReactModal>
   );
-}
+};
+
+export default Modal;
