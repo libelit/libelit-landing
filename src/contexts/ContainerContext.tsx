@@ -1,7 +1,6 @@
 "use client";
 import Container from "@/components/UiComponents/Layouts/Container";
 import { createContext, useContext, useEffect, useState } from "react";
-import { MetaMaskProvider, useSDK } from "@metamask/sdk-react";
 import axiosClient from "@/app/axiosClient";
 import requests from "@/Api/requests";
 import { useRouter } from "next/router";
@@ -43,19 +42,6 @@ export const ContainerProvider = ({ children }: any) => {
         setTransaction: setTransaction,
       }}
     >
-      <MetaMaskProvider
-        debug={false}
-        sdkOptions={{
-          checkInstallationImmediately: false,
-          dappMetadata: {
-            name: "Libelit",
-            url: "http://localhost:3000",
-          },
-          // Other options
-        }}
-      >
-        <Container>{children}</Container>
-      </MetaMaskProvider>
     </ContainerContext.Provider>
   );
 };
