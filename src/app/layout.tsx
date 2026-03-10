@@ -3,7 +3,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 // Your existing global styles and font import
 import './globals.scss';
-import { Inter } from 'next/font/google';
+import { Inter } from '@next/font/google';
 import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
