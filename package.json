@@ -67,6 +67,5 @@
     "tailwindcss": "^3.4.1",
     "url-loader": "^4.1.1"
   },
-  "proxy": "https://libelit.com",
-  "packageManager": "yarn@3.6.4"
+  "proxy": "https://libelit.com"
 }
