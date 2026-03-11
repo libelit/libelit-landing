@@ -66,6 +66,5 @@
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "url-loader": "^4.1.1"
-  },
-  "proxy": "https://libelit.com"
+  }
 }
