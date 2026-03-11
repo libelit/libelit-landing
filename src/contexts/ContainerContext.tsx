@@ -7,6 +7,9 @@ import { useRouter } from "next/router";
 type ContainerContextValue = {
   pageTitle: any;
   setPageTitle: (t: any) => void;
+  user: any;
+  setUser: (u: any) => void;
+  fetchUser: () => void;
 };
 
 const ContainerContext = createContext<ContainerContextValue | undefined>(undefined);
@@ -14,14 +17,34 @@ const ContainerContext = createContext<ContainerContextValue | undefined>(undefi
 export const ContainerProvider = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   const [pageTitle, setPageTitle] = useState<any>();
+  const [user, setUser] = useState<any>(null);
+
+  // Landing‑page friendly: no backend call; keep function so other components
+  // that call `fetchUser()` won't break.
+  const fetchUser = () => {
+    setUser(null);
+  };
 
   useEffect(() => {
-    // This was used for user switching before, but now it's removed.
-    // We keep an effect for future enhancements if needed.
-  }, [router.pathname]);
+    if (router.pathname === "/demo" || router.pathname.startsWith("/demo/")) {
+      setUser(null);
+    } else {
+      fetchUser();
+    }
+    // Intentionally single-run on mount (same as your previous effect)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <ContainerContext.Provider value={{ pageTitle, setPageTitle }}>
+    <ContainerContext.Provider
+      value={{
+        pageTitle,
+        setPageTitle,
+        user,
+        setUser,
+        fetchUser,
+      }}
+    >
       <Container>{children}</Container>
     </ContainerContext.Provider>
   );
