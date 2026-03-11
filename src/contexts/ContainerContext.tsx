@@ -1,11 +1,10 @@
 "use client";
+
 import Container from "@/components/UiComponents/Layouts/Container";
 import { createContext, useContext, useEffect, useState } from "react";
-import axiosClient from "@/app/axiosClient";
-import requests from "@/Api/requests";
 import { useRouter } from "next/router";
-import { ethers } from "ethers";
 
+// Keep the API surface as `any` for now to avoid typing churn
 const ContainerContext = createContext<any>(undefined);
 
 export const ContainerProvider = ({ children }: any) => {
@@ -15,33 +14,36 @@ export const ContainerProvider = ({ children }: any) => {
   const [user, setUser] = useState(null);
   const [transaction, setTransaction] = useState([]);
 
+  // Landing‑page friendly: no backend call; keep function so other components
+  // that call `fetchUser()` won't break.
   const fetchUser = () => {
-    axiosClient
-      .get(requests.settings.data)
-      .then((response) => setUser(response.data))
-      .catch((error) => console.log(error));
+    setUser(null);
   };
 
   useEffect(() => {
-    if (router.pathname === "/demo" || router.pathname.startsWith("/demo/"))
+    // Preserve original route behavior without calling a backend
+    if (router.pathname === "/demo" || router.pathname.startsWith("/demo/")) {
       setUser(null);
-    else fetchUser();
+    } else {
+      fetchUser();
+    }
   }, []);
 
   return (
     <ContainerContext.Provider
       value={{
-        pageTitle: pageTitle,
-        setPageTitle: setPageTitle,
-        accounts: accounts,
-        setAccounts: setAccounts,
-        user: user,
-        fetchUser: fetchUser,
-        setUser: setUser,
-        transaction: transaction,
-        setTransaction: setTransaction,
+        pageTitle,
+        setPageTitle,
+        accounts,
+        setAccounts,
+        user,
+        fetchUser,
+        setUser,
+        transaction,
+        setTransaction,
       }}
     >
+      <Container>{children}</Container>
     </ContainerContext.Provider>
   );
 };
