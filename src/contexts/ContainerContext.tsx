@@ -4,45 +4,24 @@ import Container from "@/components/UiComponents/Layouts/Container";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-// Keep the API surface as `any` for now to avoid typing churn
-const ContainerContext = createContext<any>(undefined);
+type ContainerContextValue = {
+  pageTitle: any;
+  setPageTitle: (t: any) => void;
+};
 
-export const ContainerProvider = ({ children }: any) => {
+const ContainerContext = createContext<ContainerContextValue | undefined>(undefined);
+
+export const ContainerProvider = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   const [pageTitle, setPageTitle] = useState<any>();
-  const [accounts, setAccounts] = useState<any>([]);
-  const [user, setUser] = useState(null);
-  const [transaction, setTransaction] = useState([]);
-
-  // Landing‑page friendly: no backend call; keep function so other components
-  // that call `fetchUser()` won't break.
-  const fetchUser = () => {
-    setUser(null);
-  };
 
   useEffect(() => {
-    // Preserve original route behavior without calling a backend
-    if (router.pathname === "/demo" || router.pathname.startsWith("/demo/")) {
-      setUser(null);
-    } else {
-      fetchUser();
-    }
-  }, []);
+    // This was used for user switching before, but now it's removed.
+    // We keep an effect for future enhancements if needed.
+  }, [router.pathname]);
 
   return (
-    <ContainerContext.Provider
-      value={{
-        pageTitle,
-        setPageTitle,
-        accounts,
-        setAccounts,
-        user,
-        fetchUser,
-        setUser,
-        transaction,
-        setTransaction,
-      }}
-    >
+    <ContainerContext.Provider value={{ pageTitle, setPageTitle }}>
       <Container>{children}</Container>
     </ContainerContext.Provider>
   );
