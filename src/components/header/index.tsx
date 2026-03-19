@@ -30,10 +30,6 @@ const Header = async ({ lang = "en" }: { lang: Locale }) => {
           <HomeSidebar nav={translate} lang={lang} />
         </div>
 
-        <nav className="hidden lg:flex items-center text-base justify-between">
-
-            </button>
-          </div>
           <a
             className="btn-link text-lg text-semiBold"
             href={`/${lang}/roadmap`}
