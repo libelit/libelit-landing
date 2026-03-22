@@ -58,9 +58,9 @@ function HomeSidebar({ nav, lang }: any) {
               onClick={() => {
                 setIsSidebarOpen(false);
               }}
-              href={`/${lang}/FAQ`}
+              href={`/${lang}/faq`}
             >
-              {nav.FAQ}
+              {nav.faq}
             </a>
             
             <a
