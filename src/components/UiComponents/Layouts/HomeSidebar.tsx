@@ -52,7 +52,17 @@ function HomeSidebar({ nav, lang }: any) {
 
         <div className=" flex-col items-center gap-16 px-2">
           <div className="flex-col items-center gap-8">
-           
+
+             <a
+              className="btn-link text-lg text-semiBold px-3 py-[1.625rem]"
+              onClick={() => {
+                setIsSidebarOpen(false);
+              }}
+              href={`/${lang}/FAQ`}
+            >
+              {nav.FAQ}
+            </a>
+            
             <a
               className="btn-link text-lg text-semiBold px-3 py-[1.625rem]"
               onClick={() => {
