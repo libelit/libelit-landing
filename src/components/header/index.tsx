@@ -31,7 +31,12 @@ const Header = async ({ lang = "en" }: { lang: Locale }) => {
         </div>
 
         <nav className="hidden lg:flex items-center text-base justify-between">
-          
+
+          </a>
+          <a className="btn-link text-lg text-semiBold" href={`/${lang}/about`}>
+            {translate.faq}
+          </a>
+        
           <a
             className="btn-link text-lg text-semiBold"
             href={`/${lang}`}
