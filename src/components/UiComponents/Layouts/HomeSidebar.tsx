@@ -103,20 +103,11 @@ function HomeSidebar({ nav, lang }: any) {
               onClick={() => {
                 setIsSidebarOpen(false);
               }}
-              href={`/${lang}/roadmap`}
+              href={`/${lang}`}
             >
               {nav.road_map}
             </a>
 
-            <a
-              className="btn-link text-lg text-semiBold px-3 py-[1.625rem]"
-              onClick={() => {
-                setIsSidebarOpen(false);
-              }}
-              href={`/${lang}/faq`}
-            >
-              {nav.faq}
-            </a>
             <a
               className="btn-link text-lg text-semiBold px-3 py-[1.625rem]"
               onClick={() => {
