@@ -34,7 +34,7 @@ const Header = async ({ lang = "en" }: { lang: Locale }) => {
 
           <a 
             className="btn-link text-lg text-semiBold" 
-            href={`/${lang}/faq`}
+            href={`/${lang}/about`}
             >
             {translate.faq}
           </a>
