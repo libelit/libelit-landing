@@ -2,8 +2,6 @@ import { Locale } from "@/i18n.config";
 import { getDictionary } from "library/dictionaries";
 import Image from "next/image";
 import libelitLogo from "logos/libelit-logo.svg?url";
-import discordIcon from "logos/discord.svg?url";
-import xIcon from "logos/x.svg?url";
 import linkedinIcon from "logos/linkedin.svg?url";
 
 export async function Footer({ lang = "en" }: { lang: Locale }) {
@@ -28,29 +26,10 @@ export async function Footer({ lang = "en" }: { lang: Locale }) {
                 <div className="text-primary-900 text-center text-base font-semibold leading-6">
                   <a href={`/${lang}/about`}>{translate.about_us}</a>
                 </div>
-                <div className="text-primary-900 text-center text-base font-semibold leading-6">
-                  <a href={`/${lang}/roadmap`}>{translate.road_map}</a>
-                </div>
-                <div className="text-primary-900 text-center text-base font-semibold leading-6">
-                  <a href={`/${lang}/faq?whitepaper=true`}>
-                    {" "}
-                    {translate.white_paper}
-                  </a>
-                </div>
-                <div className="text-primary-900 text-center text-base font-semibold leading-6 whitespace-nowrap">
-                  <a href={`/${lang}/faq`}> {translate.faq}</a>
-                </div>
               </div>
 
               <div className="md:justify-between md:self-end flex gap-5 pl-24 items-start max-md:max-w-full max-md:flex-wrap sm:mt-10 md:mt-0 sm:pl-0">
-                <a href="https://twitter.com/LiBeLit" target="_blank">
-                  <Image
-                    loading="lazy"
-                    src={xIcon}
-                    alt="X"
-                    className="aspect-square object-contain object-center w-[23px] fill-zinc-900 overflow-hidden shrink-0 max-w-full"
-                  />
-                </a>
+  
                 <a
                   href="https://www.linkedin.com/company/libelit"
                   target="_blank"
@@ -61,15 +40,7 @@ export async function Footer({ lang = "en" }: { lang: Locale }) {
                     alt="linkedin"
                     className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-stretch shrink-0 max-w-full"
                   />
-                </a>
-                <a href="https://twitter.com/LiBeLit" target="_blank">
-                  <Image
-                    loading="lazy"
-                    src={discordIcon}
-                    alt="discord"
-                    className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-stretch shrink-0 max-w-full"
-                  />
-                </a>
+                  </a>
               </div>
             </div>
           </div>

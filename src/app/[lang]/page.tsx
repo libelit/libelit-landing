@@ -11,17 +11,10 @@ import bannerMobile from "images/banner-sm.png";
 import blockchain from "images/blockchain.png";
 import blockchainMobile from "images/blockchain-sm.png";
 import Image from "next/image";
-import { HowDoesItWork } from "components/HowDoesItWork";
-import userIcon from "icons/shapes/user.svg?url";
-import walletIcon from "icons/shapes/wallet.svg?url";
-import bookIcon from "icons/shapes/book.svg?url";
-import searchIcon from "icons/shapes/search.svg?url";
-import coinHandIcon from "icons/shapes/coins-hand.svg?url";
 import aboutRealEstate from "images/about-real-estate.png";
 import realEstatePresent from "images/real-estate-present.png";
 import invFundTools from "images/inv-fund-tools.png";
 
-import { Timer } from "@/components/timer";
 import { AreYouInterested } from "@/components/AreYouInterested";
 import target from "images/target.png";
 import targetTablet from "images/target-md.png";
@@ -31,35 +24,11 @@ import betterDesignTablet from "images/better-design-md.png";
 import bernard from "images/people/bernard-hermant-md.png";
 import bernardTablet from "images/people/bernard-hermant.png";
 import bernardMobile from "images/people/team-member-1-sm.png";
-import { Roadmap } from "@/components/roadmap";
 import SubscribeButton from "@/components/SubscribeButton";
 import FindOutMoreButton from "@/components/WhitepaperButton";
 import { AlertProvider } from "@/contexts/AlertContext";
 import Animate from "@/components/UiComponents/Animate";
 // import ReactGA from "react-ga4";
-
-const howItWorks = [
-  {
-    icon: userIcon,
-    title: "1. Set up your profile.",
-  },
-  {
-    icon: walletIcon,
-    title: "2. Connect your digital wallet.",
-  },
-  {
-    icon: bookIcon,
-    title: "3. Improve your knowledge with eLearning materials.",
-  },
-  {
-    icon: searchIcon,
-    title: "4. Browse various real estate projects.",
-  },
-  {
-    icon: coinHandIcon,
-    title: "5. Swap your crypto into project tokens.",
-  },
-];
 
 export default async function Page({
   params: { lang },
@@ -373,28 +342,7 @@ export default async function Page({
         {/* what we do section ends */}
       </div>
 
-      <div className="relative w-full">
-        <div className="flex flex-col items-center justify-start m-auto w-full">
-          {/* how does it work section starts */}
-          <HowDoesItWork lang={lang} steps={howItWorks} />
-
-          {/* how does it work section ends */}
-
-          {/* Roadmap section starts */}
-          <Roadmap lang={lang} />
-
-          {/* Roadmap section ends */}
-        </div>
-      </div>
-
       <div className="w-full lg:px-[112px] md:px-8 px-5">
-        {/* platform launch section starts */}
-        <Timer lang={lang} />
-        {/* platform launch section ends */}
-
-        {/* Are you interested section starts */}
-        <AreYouInterested lang={lang} />
-        {/* Are you interested section ends */}
 
         <div className="max-w-[880px] justify-center m-auto lg:pb-[112px] md:pt-[64px] md:pb-[64px] pt-[32px] pb-[48px] text-center">
           <Animate type="pull-up-first" reverse>
