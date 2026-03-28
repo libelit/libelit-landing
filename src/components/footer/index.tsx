@@ -31,15 +31,6 @@ export async function Footer({ lang = "en" }: { lang: Locale }) {
                 <div className="text-primary-900 text-center text-base font-semibold leading-6">
                   <a href={`/${lang}/roadmap`}>{translate.road_map}</a>
                 </div>
-                <div className="text-primary-900 text-center text-base font-semibold leading-6">
-                  <a href={`/${lang}/faq?whitepaper=true`}>
-                    {" "}
-                    {translate.white_paper}
-                  </a>
-                </div>
-                <div className="text-primary-900 text-center text-base font-semibold leading-6 whitespace-nowrap">
-                  <a href={`/${lang}/faq`}> {translate.faq}</a>
-                </div>
               </div>
 
               <div className="md:justify-between md:self-end flex gap-5 pl-24 items-start max-md:max-w-full max-md:flex-wrap sm:mt-10 md:mt-0 sm:pl-0">
