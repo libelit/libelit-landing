@@ -25,7 +25,6 @@ import betterDesignTablet from "images/better-design-md.png";
 import bernard from "images/people/bernard-hermant-md.png";
 import bernardTablet from "images/people/bernard-hermant.png";
 import bernardMobile from "images/people/team-member-1-sm.png";
-import { Roadmap } from "@/components/roadmap";
 import SubscribeButton from "@/components/SubscribeButton";
 import FindOutMoreButton from "@/components/WhitepaperButton";
 import { AlertProvider } from "@/contexts/AlertContext";
@@ -342,16 +341,6 @@ export default async function Page({
           </Animate>
         </div>
         {/* what we do section ends */}
-      </div>
-
-      <div className="relative w-full">
-        <div className="flex flex-col items-center justify-start m-auto w-full">
-
-          {/* Roadmap section starts */}
-          <Roadmap lang={lang} />
-
-          {/* Roadmap section ends */}
-        </div>
       </div>
 
       <div className="w-full lg:px-[112px] md:px-8 px-5">
