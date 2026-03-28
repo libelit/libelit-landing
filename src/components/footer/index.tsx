@@ -2,8 +2,6 @@ import { Locale } from "@/i18n.config";
 import { getDictionary } from "library/dictionaries";
 import Image from "next/image";
 import libelitLogo from "logos/libelit-logo.svg?url";
-import discordIcon from "logos/discord.svg?url";
-import xIcon from "logos/x.svg?url";
 import linkedinIcon from "logos/linkedin.svg?url";
 
 export async function Footer({ lang = "en" }: { lang: Locale }) {
@@ -45,6 +43,7 @@ export async function Footer({ lang = "en" }: { lang: Locale }) {
                     alt="linkedin"
                     className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-stretch shrink-0 max-w-full"
                   />
+                  </a>
               </div>
             </div>
           </div>
