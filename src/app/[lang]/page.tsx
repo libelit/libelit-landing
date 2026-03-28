@@ -15,7 +15,6 @@ import aboutRealEstate from "images/about-real-estate.png";
 import realEstatePresent from "images/real-estate-present.png";
 import invFundTools from "images/inv-fund-tools.png";
 
-import { Timer } from "@/components/timer";
 import { AreYouInterested } from "@/components/AreYouInterested";
 import target from "images/target.png";
 import targetTablet from "images/target-md.png";
@@ -344,9 +343,6 @@ export default async function Page({
       </div>
 
       <div className="w-full lg:px-[112px] md:px-8 px-5">
-        {/* platform launch section starts */}
-        <Timer lang={lang} />
-        {/* platform launch section ends */}
 
         {/* Are you interested section starts */}
         <AreYouInterested lang={lang} />
