@@ -344,10 +344,6 @@ export default async function Page({
 
       <div className="w-full lg:px-[112px] md:px-8 px-5">
 
-        {/* Are you interested section starts */}
-        <AreYouInterested lang={lang} />
-        {/* Are you interested section ends */}
-
         <div className="max-w-[880px] justify-center m-auto lg:pb-[112px] md:pt-[64px] md:pb-[64px] pt-[32px] pb-[48px] text-center">
           <Animate type="pull-up-first" reverse>
             <div
