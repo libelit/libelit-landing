@@ -287,7 +287,7 @@ export default async function Page({
                     <h5 className="h3 font-bold">
                       {translate.construction_finance}
                     </h5>
-                    <ul className="list-disc text-sm ml-6 mb-">
+                    <ul className="list-disc text-sm ml-6">
                       <li>{translate.construction_finance_1}</li>
                       <li>{translate.construction_finance_2}</li>
                       <li>{translate.construction_finance_3}</li>
