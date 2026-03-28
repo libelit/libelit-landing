@@ -43,14 +43,7 @@ export async function Footer({ lang = "en" }: { lang: Locale }) {
               </div>
 
               <div className="md:justify-between md:self-end flex gap-5 pl-24 items-start max-md:max-w-full max-md:flex-wrap sm:mt-10 md:mt-0 sm:pl-0">
-                <a href="https://twitter.com/LiBeLit" target="_blank">
-                  <Image
-                    loading="lazy"
-                    src={xIcon}
-                    alt="X"
-                    className="aspect-square object-contain object-center w-[23px] fill-zinc-900 overflow-hidden shrink-0 max-w-full"
-                  />
-                </a>
+  
                 <a
                   href="https://www.linkedin.com/company/libelit"
                   target="_blank"
@@ -61,15 +54,6 @@ export async function Footer({ lang = "en" }: { lang: Locale }) {
                     alt="linkedin"
                     className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-stretch shrink-0 max-w-full"
                   />
-                </a>
-                <a href="https://twitter.com/LiBeLit" target="_blank">
-                  <Image
-                    loading="lazy"
-                    src={discordIcon}
-                    alt="discord"
-                    className="aspect-square object-contain object-center w-6 justify-center items-center overflow-hidden self-stretch shrink-0 max-w-full"
-                  />
-                </a>
               </div>
             </div>
           </div>
